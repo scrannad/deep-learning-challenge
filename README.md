@@ -39,9 +39,13 @@ Feature variable used were: <br />
 ### 2. Compiling, Training and Evaluating the Model
 The first model was built using two hidden layers with 80 and 30 neuron splits. Feature was 42, so 80 was set as close to double the feature. Activation function on the layers was 'relu' with 'sigmoid' function on the output layer since the output of this model was binary. This resulted in a 72.9% accuracy score, which was lower than my target of 75%. 
 
+![alt text](https://user-images.githubusercontent.com/119076287/240085372-2cf3951d-1838-485d-88b7-7494d9ea8f9d.png)
+
 I then attempted to optimize the model by adding an additional hidden layer, again using the 'relu' activation function. In two more models, I experimented with using the 'tanh' activation function and changing the neuron values. These models continued to produce accuracy scores below my target of 75%. 
 
 In my final optimization, I used 'kerastuner' to automate optimization. I ran this several times, adjusting the number of maximum epochs and allowed activation functions, and allowing the kerastuner to run for up to ninety minutes per session. However, I never achieved over 74%. In my final attempt, I stopped the tuner after 56 minutes, achieving 73.9% accuracy with the best model. I then analyzed the top three models' hyperparameters as well as the accuracy and loss for each model. 
+
+![alt text](https://user-images.githubusercontent.com/119076287/240085351-7345cd96-bb97-46ac-a228-bc205814993a.png)
 
 # Summary
 I was able to achieve 73.8% accuracy in my optimized model using keras tuner. This was a one percent increase over my original model. I may continue to experiment with adding and removing different features try to achieve increased predictive accuracy while maintaining the shape and integrity of the dataset. 
